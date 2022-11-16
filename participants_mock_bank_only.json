@@ -1,0 +1,736 @@
+[
+  {
+    "OrganisationId": "74e929d9-33b6-4d85-8ba7-c146c867a817",
+    "Status": "Active",
+    "OrganisationName": "Open Banking Brasil",
+    "CreatedOn": "2020-12-11T13:34:10.449Z",
+    "LegalEntityName": "Raidiam Services Ltd",
+    "CountryOfRegistration": "UK",
+    "CompanyRegister": "Cadastro Nacional Da Pessoa Juridica",
+    "Tag": null,
+    "Size": null,
+    "RegistrationNumber": "43142666000197",
+    "RegistrationId": null,
+    "RegisteredName": "Raidiam Services Ltd",
+    "AddressLine1": "199 Bishopsgate",
+    "AddressLine2": "Vila Hamburguesa",
+    "City": "LONDON",
+    "Postcode": "EC2M 3TY",
+    "Country": "UK",
+    "ParentOrganisationReference": "43142666000197",
+    "AuthorisationServers": [
+      {
+        "AuthorisationServerId": "c8f0bf49-4744-4933-8960-7add6e590841",
+        "AutoRegistrationSupported": true,
+        "AutoRegistrationNotificationWebhook": null,
+        "SupportsCiba": false,
+        "SupportsDCR": false,
+        "ApiResources": [
+          {
+            "ApiResourceId": "441f5d3d-385e-4b06-8a34-5b7c4dfcb125",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "fb1a47cd-0620-4a91-b3a9-c5bffb38bd2d",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v1/accounts"
+              },
+              {
+                "ApiDiscoveryId": "2191da36-e03c-4802-a44a-66a56a48516e",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v1/accounts/{accountId}"
+              },
+              {
+                "ApiDiscoveryId": "1940e9f0-0aea-4164-8f02-f5a1bc72e87d",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v1/accounts/{accountId}/transactions"
+              },
+              {
+                "ApiDiscoveryId": "3f29155c-dad9-4818-87b6-059606157558",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v1/accounts/{accountId}/balances"
+              },
+              {
+                "ApiDiscoveryId": "636f8f95-f5f0-42c1-84d3-2c4d85ea7bc3",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v1/accounts/{accountId}/transactions-current"
+              },
+              {
+                "ApiDiscoveryId": "bb7f64f0-675d-4d23-a8c7-ffad45e7dbc0",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v1/accounts/{accountId}/overdraft-limits"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": null,
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "accounts"
+          },
+          {
+            "ApiResourceId": "92c51073-3df8-4e2a-8554-7076cb9274e6",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "803ae32f-c4f6-45bc-9947-b92985c3568b",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/resources/v2/resources"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "resources"
+          },
+          {
+            "ApiResourceId": "068f6985-0f09-42bc-9587-c19d7f36189e",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "2864249d-0e90-495e-916a-676b3cdfcd9f",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v2/business/identifications"
+              },
+              {
+                "ApiDiscoveryId": "76e8d1f7-20eb-4437-a77f-b87ff584bd8c",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v2/business/financial-relations"
+              },
+              {
+                "ApiDiscoveryId": "afb630e9-cd83-4751-af79-f6a04492c5db",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v2/business/qualifications"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "customers-business"
+          },
+          {
+            "ApiResourceId": "4fec7b22-5cd4-42f5-955e-d73b8f0b0509",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "e5a6ac79-299a-40f1-b90f-0782aa4b1709",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/consents/v2/consents/{consentId}"
+              },
+              {
+                "ApiDiscoveryId": "20d4878e-c93a-4f03-90a9-d32e1beab095",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/consents/v2/consents"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "consents"
+          },
+          {
+            "ApiResourceId": "65df166a-221a-455b-8367-cbe7901445eb",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "00c31590-46a1-4f39-a57f-4ba69a502956",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/resources/v1/resources"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": null,
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "resources"
+          },
+          {
+            "ApiResourceId": "6849408c-41e6-4547-b0b3-3b5e5230628f",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "3c149745-1be6-4f6f-a541-21e591804504",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/payments/v1/pix/payments/{paymentId}"
+              },
+              {
+                "ApiDiscoveryId": "ea751141-9538-48d5-86b9-8900f141156b",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/payments/v1/pix/payments"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/payments/1.0.1/MockBankDummyFile.zip",
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "payments-pix"
+          },
+          {
+            "ApiResourceId": "b67768ec-a0aa-4445-ae96-e00f28145146",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "0d2592f5-3345-4e4f-a715-1d8d269f32f8",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v1/personal/qualifications"
+              },
+              {
+                "ApiDiscoveryId": "2bb77ccf-a60d-474e-a659-e477a0a2c1cc",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v1/personal/identifications"
+              },
+              {
+                "ApiDiscoveryId": "5db44b2c-0275-41ed-9a55-6f176641bc4d",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v1/personal/financial-relations"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": null,
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "customers-personal"
+          },
+          {
+            "ApiResourceId": "c50f7991-89cc-4281-9f6a-f601412dcc9b",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "11966432-42a0-487d-bb37-ba76b6056e02",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v2/accounts/{creditCardAccountId}/bills"
+              },
+              {
+                "ApiDiscoveryId": "160666b2-6eb2-42f5-96e0-5954d25d5f7b",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v2/accounts/{creditCardAccountId}/bills/{billId}/transactions"
+              },
+              {
+                "ApiDiscoveryId": "d6337459-6d35-4161-af59-a49179bfbc56",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v2/accounts/{creditCardAccountId}/transactions-current"
+              },
+              {
+                "ApiDiscoveryId": "dd60ee41-e467-4bbe-9715-2daead9e068a",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v2/accounts"
+              },
+              {
+                "ApiDiscoveryId": "035f346c-9594-405b-854e-dad76645bf16",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v2/accounts/{creditCardAccountId}"
+              },
+              {
+                "ApiDiscoveryId": "49e9743d-19eb-4b3d-9245-cdb111c65a53",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v2/accounts/{creditCardAccountId}/transactions"
+              },
+              {
+                "ApiDiscoveryId": "2be8ff36-0890-4fb1-b61c-19bd28d9293d",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v2/accounts/{creditCardAccountId}/limits"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "credit-cards-accounts"
+          },
+          {
+            "ApiResourceId": "fcba2daa-5908-4761-9087-9db5a517469d",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "b3d02550-77d6-4206-b7a3-01dc6f9696ad",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/payments/v1/consents/{consentId}"
+              },
+              {
+                "ApiDiscoveryId": "6d5f5f9d-00d6-49f9-98b5-43542e1af164",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/payments/v1/consents"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/payments/1.0.1/MockBankDummyFile.zip",
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "payments-consents"
+          },
+          {
+            "ApiResourceId": "d5c6537a-a82d-4e66-b3f4-1a87780caf63",
+            "ApiVersion": "1.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "272ed53c-01b6-4782-a087-ec7a5d44c37c",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/invoice-financings/v1/contracts/{contractId}/payments"
+              },
+              {
+                "ApiDiscoveryId": "7c05bd01-a0bd-427c-b685-9cdef18d657b",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/invoice-financings/v1/contracts"
+              },
+              {
+                "ApiDiscoveryId": "69a9059e-2070-4441-abb6-8045f46d6c29",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/invoice-financings/v1/contracts/{contractId}"
+              },
+              {
+                "ApiDiscoveryId": "b32eae57-881e-414e-9db8-33d2cdaa8dca",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/invoice-financings/v1/contracts/{contractId}/warranties"
+              },
+              {
+                "ApiDiscoveryId": "29dfc805-4fd3-4737-8a6b-818ef4593053",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/invoice-financings/v1/contracts/{contractId}/scheduled-instalments"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://openbanking-brasil.github.io/conformance/submissions/functional/consents/1.0.3/Agora_CTVM-Agora-API-CONSENTS-30-Nov-2021.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "invoice-financings"
+          },
+          {
+            "ApiResourceId": "f1428152-4c2f-4796-81bf-796d7ff434d6",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "95a2554f-8172-4b75-882a-870778e4a662",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/unarranged-accounts-overdraft/v2/contracts"
+              },
+              {
+                "ApiDiscoveryId": "e8085c00-4986-4dd5-a784-0b275482d83b",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/unarranged-accounts-overdraft/v2/contracts/{contractId}"
+              },
+              {
+                "ApiDiscoveryId": "9d5900ca-9757-448b-96f6-0c4ccf633de7",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/unarranged-accounts-overdraft/v2/contracts/{contractId}/payments"
+              },
+              {
+                "ApiDiscoveryId": "36377918-c7f7-4d9b-8f61-5e73804f6cc9",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/unarranged-accounts-overdraft/v2/contracts/{contractId}/warranties"
+              },
+              {
+                "ApiDiscoveryId": "04ade7c3-8bd9-40c8-b2d1-1624544d1873",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/unarranged-accounts-overdraft/v2/contracts/{contractId}/scheduled-instalments"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "unarranged-accounts-overdraft"
+          },
+          {
+            "ApiResourceId": "112813e6-e59e-45a8-8055-ecc8e7370704",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "404708e0-864c-452d-ba10-7cfac4467ec1",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/loans/v1/contracts"
+              },
+              {
+                "ApiDiscoveryId": "8ee16daf-966a-4855-b872-06b1a15fcf24",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/loans/v1/contracts/{contractId}"
+              },
+              {
+                "ApiDiscoveryId": "5f2eb060-9358-420e-9006-8492358720ee",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/loans/v1/contracts/{contractId}/payments"
+              },
+              {
+                "ApiDiscoveryId": "572022c0-3f19-432e-80f4-30903fb38062",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/loans/v1/contracts/{contractId}/warranties"
+              },
+              {
+                "ApiDiscoveryId": "632a7799-2860-4527-b594-b31351b1d16c",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/loans/v1/contracts/{contractId}/scheduled-instalments"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": null,
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "loans"
+          },
+          {
+            "ApiResourceId": "c60a1787-20dd-4a0a-9a2d-3fcf4819ded8",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "0c0eb910-4fd4-4298-976d-0540e00833de",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v1/accounts"
+              },
+              {
+                "ApiDiscoveryId": "58d0de32-a118-41a6-9fa1-b07fe3656bf7",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v1/accounts/{creditCardAccountId}"
+              },
+              {
+                "ApiDiscoveryId": "72afda1a-7955-4f2d-9bc6-4884d1adfc41",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v1/accounts/{creditCardAccountId}/limits"
+              },
+              {
+                "ApiDiscoveryId": "5a321b7e-4ca3-4103-8ba1-d3fd416f1b76",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v1/accounts/{creditCardAccountId}/transactions"
+              },
+              {
+                "ApiDiscoveryId": "f97d1ee9-696e-482d-b56e-2899fb464606",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v1/accounts/{creditCardAccountId}/transactions-current"
+              },
+              {
+                "ApiDiscoveryId": "2e8bcf54-27ea-4e46-a49b-5215c5cf1a5c",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v1/accounts/{creditCardAccountId}/bills/{billId}/transactions"
+              },
+              {
+                "ApiDiscoveryId": "7d7dd9ac-2a8f-40da-8b1f-624884a55f54",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/credit-cards-accounts/v1/accounts/{creditCardAccountId}/bills"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": null,
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "credit-cards-accounts"
+          },
+          {
+            "ApiResourceId": "527dfaf9-1603-41b3-bc3a-b6e251a5a4bf",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "1255fdd6-85cf-41fc-86d0-3f423d15482f",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v2/accounts/{accountId}/transactions-current"
+              },
+              {
+                "ApiDiscoveryId": "9d29144c-6e7d-46a4-96f4-4167aaf5a3a9",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v2/accounts"
+              },
+              {
+                "ApiDiscoveryId": "370c1a48-0d03-4dda-942f-8d74b2d80a89",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v2/accounts/{accountId}"
+              },
+              {
+                "ApiDiscoveryId": "0da6e142-ec29-44a6-8d5e-cdc0d2db1df9",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v2/accounts/{accountId}/balances"
+              },
+              {
+                "ApiDiscoveryId": "056ec04e-18e4-41c7-9427-f01bc69709b9",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v2/accounts/{accountId}/transactions"
+              },
+              {
+                "ApiDiscoveryId": "2bd9f437-54ad-4b17-b973-747132acfd6b",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/accounts/v2/accounts/{accountId}/overdraft-limits"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "accounts"
+          },
+          {
+            "ApiResourceId": "9555d7aa-5df2-4b1e-bedf-abd9814533db",
+            "ApiVersion": "1.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "42828687-3480-4254-88cc-da9011ab6d08",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/financings/v1/contracts"
+              },
+              {
+                "ApiDiscoveryId": "ff0e752e-2739-477d-a11d-46635d467bd9",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/financings/v1/contracts/{contractId}"
+              },
+              {
+                "ApiDiscoveryId": "cba98851-3bbc-4716-a96b-9494adfd8069",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/financings/v1/contracts/{contractId}/payments"
+              },
+              {
+                "ApiDiscoveryId": "d61b8858-9820-4f76-9b67-abd558d447cd",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/financings/v1/contracts/{contractId}/warranties"
+              },
+              {
+                "ApiDiscoveryId": "49c69bd4-7ff6-4980-a090-4d3b218ee4bb",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/financings/v1/contracts/{contractId}/scheduled-instalments"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "financings"
+          },
+          {
+            "ApiResourceId": "a1a6ba9f-c72d-482c-861e-c0f92d3e203f",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "c07e0720-6519-41c0-8b84-0547f89c4335",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v2/personal/identifications"
+              },
+              {
+                "ApiDiscoveryId": "3beda0b5-39f8-47b1-8ee9-9e75742d67ff",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v1/personal/qualifications"
+              },
+              {
+                "ApiDiscoveryId": "2ed415ab-77e7-4298-90a6-9a61935ca804",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v1/personal/financial-relations"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "customers-personal"
+          },
+          {
+            "ApiResourceId": "87f23d41-75dd-462f-8a18-4fcf595bf6e2",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "b1894698-8e41-43f5-b8b8-6fc616c15ceb",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/loans/v2/contracts"
+              },
+              {
+                "ApiDiscoveryId": "bcf83e4d-5552-4944-a7c6-cedeac50fc30",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/loans/v2/contracts/{contractId}"
+              },
+              {
+                "ApiDiscoveryId": "4691f00e-c705-4ddd-91bb-e4e8483761ca",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/loans/v2/contracts/{contractId}/payments"
+              },
+              {
+                "ApiDiscoveryId": "a9a58d11-3da6-4442-b7ec-742b991b8a5d",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/loans/v2/contracts/{contractId}/warranties"
+              },
+              {
+                "ApiDiscoveryId": "af3ad080-00dc-4f95-a7fb-4a4ed86af0d4",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/loans/v2/contracts/{contractId}/scheduled-instalments"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "loans"
+          },
+          {
+            "ApiResourceId": "ca27967e-9140-4588-8351-2aecfff25efd",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "7c019d03-96d4-4396-9075-b187e1620fb5",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v1/business/identifications"
+              },
+              {
+                "ApiDiscoveryId": "5917dd18-72c7-40cf-9e9e-665f03229246",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v1/business/financial-relations"
+              },
+              {
+                "ApiDiscoveryId": "aca36c96-29dc-489b-bc35-134349abf3b7",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v1/business/qualifications"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": null,
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "customers-business"
+          },
+          {
+            "ApiResourceId": "758a27dd-8b4b-4793-bee4-60cf64bc18f3",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "082e6ccb-670c-4c3d-8114-e4325fabebea",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/invoice-financings/v2/contracts"
+              },
+              {
+                "ApiDiscoveryId": "b5a183bf-0c65-4186-918c-44c8de7a9961",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/invoice-financings/v2/contracts/{contractId}"
+              },
+              {
+                "ApiDiscoveryId": "9e16dd2d-1ac5-4a2c-a9f8-4b5187a73c67",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/invoice-financings/v2/contracts/{contractId}/payments"
+              },
+              {
+                "ApiDiscoveryId": "198401a1-37a1-45d0-8bc7-ee50cd1ef807",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/invoice-financings/v2/contracts/{contractId}/warranties"
+              },
+              {
+                "ApiDiscoveryId": "b47f2cc8-02f8-4261-90b9-585b7e966652",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/invoice-financings/v2/contracts/{contractId}/scheduled-instalments"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "invoice-financings"
+          },
+          {
+            "ApiResourceId": "2a24e47c-2836-4694-bc73-35c60ebd9a0f",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "9b75da4f-e9bc-4010-96a3-da0497e3a094",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/unarranged-accounts-overdraft/v1/contracts/{contractId}"
+              },
+              {
+                "ApiDiscoveryId": "49cdf198-3fdc-4173-a5b9-8d9347cad006",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/unarranged-accounts-overdraft/v1/contracts/{contractId}/payments"
+              },
+              {
+                "ApiDiscoveryId": "e2a9c305-f19a-46a4-8b26-de5dafcc16c9",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/unarranged-accounts-overdraft/v1/contracts/{contractId}/warranties"
+              },
+              {
+                "ApiDiscoveryId": "1a5e84f0-c91b-478d-b8a7-8c650a45f00f",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/unarranged-accounts-overdraft/v1/contracts/{contractId}/scheduled-instalments"
+              },
+              {
+                "ApiDiscoveryId": "af15b47f-3800-44c8-bf9a-a1a0595e51c9",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/unarranged-accounts-overdraft/v1/contracts"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": null,
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "unarranged-accounts-overdraft"
+          },
+          {
+            "ApiResourceId": "7aea412d-40e4-4f79-a9b2-84b18a699be6",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "49fbfd3b-98a8-48f7-b002-60755752fea8",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/consents/v1/consents"
+              },
+              {
+                "ApiDiscoveryId": "9d7bce4a-d505-486f-a4cf-5fd2ce3ce407",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/consents/v1/consents/{consentId}"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": null,
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "consents"
+          },
+          {
+            "ApiResourceId": "df5fdfb2-da6c-4374-ac68-41a63e90f3f1",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "c2da4295-12ae-44d1-b468-e659019972fe",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/financings/v2/contracts"
+              },
+              {
+                "ApiDiscoveryId": "c6072360-6f7f-499f-ad47-dd2d93f3e1db",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/financings/v2/contracts/{contractId}"
+              },
+              {
+                "ApiDiscoveryId": "d1d1ce88-25ae-4e6b-887f-d1881a355eb2",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/financings/v2/contracts/{contractId}/payments"
+              },
+              {
+                "ApiDiscoveryId": "fc88fa9e-1747-40a9-b4c2-159ce86c337b",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/financings/v2/contracts/{contractId}/warranties"
+              },
+              {
+                "ApiDiscoveryId": "7ec954ef-a514-4f30-8674-79b988d2c808",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/financings/v2/contracts/{contractId}/scheduled-instalments"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/b82b725afd2ea55f96c5f4ce4908f0a6d976166f/submissions/functional/test.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "13/10/2022",
+            "CertificationExpirationDate": "13/10/2023",
+            "ApiFamilyType": "financings"
+          }
+        ],
+        "AuthorisationServerCertifications": [
+          {
+            "CertificationStartDate": "29/06/2022",
+            "CertificationExpirationDate": "29/06/2023",
+            "CertificationId": "af70a0c5-458c-4051-b3a8-68d4aedeb4c9",
+            "AuthorisationServerId": "c8f0bf49-4744-4933-8960-7add6e590841",
+            "Status": "Self-Certified",
+            "ProfileVariant": "FAPI Adv. OP w/ MTLS",
+            "ProfileType": null,
+            "ProfileVersion": 1,
+            "CertificationURI": "https://openid.net/wordpress-content/uploads/2021/07/Raidiam-Raidiam_Connect_OpenBanking_Brazil-mtls-by_value_plain_fapi_plain_response-28-Jun-2021.zip"
+          },
+          {
+            "CertificationStartDate": "29/06/2021",
+            "CertificationExpirationDate": "29/06/2022",
+            "CertificationId": "42cb5445-27af-46e2-a552-2d8b4fd38251",
+            "AuthorisationServerId": "c8f0bf49-4744-4933-8960-7add6e590841",
+            "Status": "Self-Certified",
+            "ProfileVariant": "FAPI Adv. OP w/ MTLS, PAR",
+            "ProfileType": null,
+            "ProfileVersion": 1,
+            "CertificationURI": "https://openid.net/wordpress-content/uploads/2021/07/Raidiam-RaidiamConnect-OBB_Reference_Bank-mtls-openbanking_brazil-PAR-29-Jun-2021.zip"
+          }
+        ],
+        "CustomerFriendlyDescription": null,
+        "CustomerFriendlyLogoUri": "https://cdn.raidiam.io/directory-ui/brand/obbrazil/0.2.0.112/favicon.svg",
+        "CustomerFriendlyName": "Mock Bank",
+        "DeveloperPortalUri": "https://mockbank.com/dev",
+        "TermsOfServiceUri": "https://mockbank.com/tos",
+        "NotificationWebhookAddedDate": null,
+        "OpenIDDiscoveryDocument": "https://auth.mockbank.poc.raidiam.io/.well-known/openid-configuration",
+        "Issuer": null,
+        "PayloadSigningCertLocationUri": "https://mockbank.com/payload.pem",
+        "ParentAuthorisationServerId": null,
+        "DeprecatedDate": null,
+        "RetirementDate": null,
+        "SupersededByAuthorisationServerId": null
+      }
+    ],
+    "OrgDomainClaims": [
+      {
+        "AuthorisationDomainName": "Open Banking Brasil ",
+        "AuthorityName": "Banco Central Do Brasil",
+        "RegistrationId": "CNPJ-OBB",
+        "Status": "Inactive"
+      }
+    ],
+    "OrgDomainRoleClaims": [
+      {
+        "Status": "Inactive",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "TRD",
+        "Authorisations": [],
+        "RegistrationId": "UniqRegistrationId"
+      },
+      {
+        "Status": "Active",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "CONTA",
+        "Authorisations": [],
+        "RegistrationId": "OBB-CONTA-XXX"
+      },
+      {
+        "Status": "Active",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "DADOS",
+        "Authorisations": [
+          {
+            "Status": "Inactive",
+            "MemberState": "BR"
+          }
+        ],
+        "RegistrationId": "CNPJ-OBB-DADOS"
+      },
+      {
+        "Status": "Active",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "PAGTO",
+        "Authorisations": [],
+        "RegistrationId": "CNPJ-OBB-PAGTO"
+      },
+      {
+        "Status": "Active",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "RA/CA",
+        "Authorisations": [],
+        "RegistrationId": "CA-ROLE"
+      }
+    ]
+  }
+]

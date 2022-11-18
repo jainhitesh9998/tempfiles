@@ -1,0 +1,160 @@
+[
+  {
+    "OrganisationId": "74e929d9-33b6-4d85-8ba7-c146c867a817",
+    "Status": "Active",
+    "OrganisationName": "Open Banking Brasil",
+    "CreatedOn": "2020-12-11T13:34:10.449Z",
+    "LegalEntityName": "Raidiam Services Ltd",
+    "CountryOfRegistration": "UK",
+    "CompanyRegister": "Cadastro Nacional Da Pessoa Juridica",
+    "Tag": null,
+    "Size": null,
+    "RegistrationNumber": "43142666000197",
+    "RegistrationId": null,
+    "RegisteredName": "Raidiam Services Ltd",
+    "AddressLine1": "199 Bishopsgate",
+    "AddressLine2": "Vila Hamburguesa",
+    "City": "LONDON",
+    "Postcode": "EC2M 3TY",
+    "Country": "UK",
+    "ParentOrganisationReference": "43142666000197",
+    "AuthorisationServers": [
+      {
+        "AuthorisationServerId": "e6571085-51de-49d2-857d-052af2c49fc4",
+        "AutoRegistrationSupported": true,
+        "AutoRegistrationNotificationWebhook": null,
+        "SupportsCiba": false,
+        "SupportsDCR": false,
+        "ApiResources": [
+          {
+            "ApiResourceId": "6849408c-41e6-4547-b0b3-3b5e5230628f",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "3c149745-1be6-4f6f-a541-21e591804504",
+                "ApiEndpoint": "https://www.certification.openid.net/test-mtls/a/gopay/payments/v1/pix/payments/{paymentId}"
+              },
+              {
+                "ApiDiscoveryId": "ea751141-9538-48d5-86b9-8900f141156b",
+                "ApiEndpoint": "https://www.certification.openid.net/test-mtls/a/gopay/payments/v1/pix/payments"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/payments/1.0.1/MockBankDummyFile.zip",
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "payments-pix"
+          },
+          {
+            "ApiResourceId": "fcba2daa-5908-4761-9087-9db5a517469d",
+            "ApiVersion": "1",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "b3d02550-77d6-4206-b7a3-01dc6f9696ad",
+                "ApiEndpoint": "https://www.certification.openid.net/test-mtls/a/gopay/payments/v1/consents/{consentId}"
+              },
+              {
+                "ApiDiscoveryId": "6d5f5f9d-00d6-49f9-98b5-43542e1af164",
+                "ApiEndpoint": "https://www.certification.openid.net/test-mtls/a/gopay/payments/v1/consents"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/payments/1.0.1/MockBankDummyFile.zip",
+            "CertificationStatus": null,
+            "CertificationStartDate": null,
+            "CertificationExpirationDate": null,
+            "ApiFamilyType": "payments-consents"
+          }
+        ],
+        "AuthorisationServerCertifications": [
+          {
+            "CertificationStartDate": "29/06/2022",
+            "CertificationExpirationDate": "29/06/2023",
+            "CertificationId": "af70a0c5-458c-4051-b3a8-68d4aedeb4c9",
+            "AuthorisationServerId": "c8f0bf49-4744-4933-8960-7add6e590841",
+            "Status": "Self-Certified",
+            "ProfileVariant": "FAPI Adv. OP w/ MTLS",
+            "ProfileType": null,
+            "ProfileVersion": 1,
+            "CertificationURI": "https://openid.net/wordpress-content/uploads/2021/07/Raidiam-Raidiam_Connect_OpenBanking_Brazil-mtls-by_value_plain_fapi_plain_response-28-Jun-2021.zip"
+          },
+          {
+            "CertificationStartDate": "29/06/2021",
+            "CertificationExpirationDate": "29/06/2022",
+            "CertificationId": "42cb5445-27af-46e2-a552-2d8b4fd38251",
+            "AuthorisationServerId": "c8f0bf49-4744-4933-8960-7add6e590841",
+            "Status": "Self-Certified",
+            "ProfileVariant": "FAPI Adv. OP w/ MTLS, PAR",
+            "ProfileType": null,
+            "ProfileVersion": 1,
+            "CertificationURI": "https://openid.net/wordpress-content/uploads/2021/07/Raidiam-RaidiamConnect-OBB_Reference_Bank-mtls-openbanking_brazil-PAR-29-Jun-2021.zip"
+          }
+        ],
+        "CustomerFriendlyDescription": null,
+        "CustomerFriendlyLogoUri": "https://cdn.raidiam.io/directory-ui/brand/obbrazil/0.2.0.112/favicon.svg",
+        "CustomerFriendlyName": "OpenID Certification GO!Pay",
+        "DeveloperPortalUri": "https://mockbank.com/dev",
+        "TermsOfServiceUri": "https://mockbank.com/tos",
+        "NotificationWebhookAddedDate": null,
+        "OpenIDDiscoveryDocument": "https://www.certification.openid.net/test/a/gopay/.well-known/openid-configuration",
+        "Issuer": null,
+        "PayloadSigningCertLocationUri": "https://mockbank.com/payload.pem",
+        "ParentAuthorisationServerId": null,
+        "DeprecatedDate": null,
+        "RetirementDate": null,
+        "SupersededByAuthorisationServerId": null
+      }
+    ],
+    "OrgDomainClaims": [
+      {
+        "AuthorisationDomainName": "Open Banking Brasil ",
+        "AuthorityName": "Banco Central Do Brasil",
+        "RegistrationId": "CNPJ-OBB",
+        "Status": "Inactive"
+      }
+    ],
+    "OrgDomainRoleClaims": [
+      {
+        "Status": "Inactive",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "TRD",
+        "Authorisations": [],
+        "RegistrationId": "UniqRegistrationId"
+      },
+      {
+        "Status": "Active",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "CONTA",
+        "Authorisations": [],
+        "RegistrationId": "OBB-CONTA-XXX"
+      },
+      {
+        "Status": "Active",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "DADOS",
+        "Authorisations": [
+          {
+            "Status": "Inactive",
+            "MemberState": "BR"
+          }
+        ],
+        "RegistrationId": "CNPJ-OBB-DADOS"
+      },
+      {
+        "Status": "Active",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "PAGTO",
+        "Authorisations": [],
+        "RegistrationId": "CNPJ-OBB-PAGTO"
+      },
+      {
+        "Status": "Active",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "RA/CA",
+        "Authorisations": [],
+        "RegistrationId": "CA-ROLE"
+      }
+    ]
+  }
+]

@@ -7,7 +7,9 @@
     "LegalEntityName": "Raidiam Services Ltd",
     "CountryOfRegistration": "UK",
     "CompanyRegister": "Cadastro Nacional Da Pessoa Juridica",
-    "Tag": null,
+    "Tag": [
+      ""
+    ],
     "Size": null,
     "RegistrationNumber": "43142666000197",
     "RegistrationId": null,
@@ -159,6 +161,26 @@
             "ApiFamilyType": "payments-pix"
           },
           {
+            "ApiResourceId": "40834c2f-9ff9-4405-8f88-7f37604782f5",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "d5a124ae-8e75-4061-bd50-50436c7d3a7c",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/payments/v2/consents"
+              },
+              {
+                "ApiDiscoveryId": "09315a73-3646-4de4-984b-412af5dfa7e9",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/payments/v2/consents/{consentId}"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/payments/1.0.1/MockBankDummyFile.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "12/12/2022",
+            "CertificationExpirationDate": "12/12/2023",
+            "ApiFamilyType": "payments-consents"
+          },
+          {
             "ApiResourceId": "b67768ec-a0aa-4445-ae96-e00f28145146",
             "ApiVersion": "1",
             "ApiDiscoveryEndpoints": [
@@ -305,6 +327,26 @@
             "CertificationStartDate": "13/10/2022",
             "CertificationExpirationDate": "13/10/2023",
             "ApiFamilyType": "unarranged-accounts-overdraft"
+          },
+          {
+            "ApiResourceId": "9c147ab7-d6c7-463f-be30-22f11dc22c4b",
+            "ApiVersion": "2.0.0",
+            "ApiDiscoveryEndpoints": [
+              {
+                "ApiDiscoveryId": "e93d43ac-812c-4fa3-8e00-31e6f9682650",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/payments/v2/pix/payments"
+              },
+              {
+                "ApiDiscoveryId": "32b35a98-f304-4503-a329-95106e18f949",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/payments/v2/pix/payments/{paymentId}"
+              }
+            ],
+            "FamilyComplete": true,
+            "ApiCertificationUri": "https://github.com/OpenBanking-Brasil/conformance/blob/main/submissions/functional/payments/1.0.1/MockBankDummyFile.zip",
+            "CertificationStatus": "Self-Certified",
+            "CertificationStartDate": "12/12/2022",
+            "CertificationExpirationDate": "12/12/2023",
+            "ApiFamilyType": "payments-pix"
           },
           {
             "ApiResourceId": "112813e6-e59e-45a8-8055-ecc8e7370704",
@@ -455,12 +497,12 @@
                 "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v2/personal/identifications"
               },
               {
-                "ApiDiscoveryId": "3beda0b5-39f8-47b1-8ee9-9e75742d67ff",
-                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v1/personal/qualifications"
+                "ApiDiscoveryId": "54145ab4-434e-4ba8-986f-764275f0ab9d",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v2/personal/qualifications"
               },
               {
-                "ApiDiscoveryId": "2ed415ab-77e7-4298-90a6-9a61935ca804",
-                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v1/personal/financial-relations"
+                "ApiDiscoveryId": "792bf7f8-85e4-4944-8701-7707d208ed20",
+                "ApiEndpoint": "https://matls-api.mockbank.poc.raidiam.io/open-banking/customers/v2/personal/financial-relations"
               }
             ],
             "FamilyComplete": true,
@@ -692,18 +734,25 @@
     ],
     "OrgDomainRoleClaims": [
       {
-        "Status": "Inactive",
-        "AuthorisationDomain": "Open Banking Brasil ",
-        "Role": "TRD",
-        "Authorisations": [],
-        "RegistrationId": "UniqRegistrationId"
-      },
-      {
         "Status": "Active",
         "AuthorisationDomain": "Open Banking Brasil ",
         "Role": "CONTA",
         "Authorisations": [],
         "RegistrationId": "OBB-CONTA-XXX"
+      },
+      {
+        "Status": "Active",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "PAGTO",
+        "Authorisations": [],
+        "RegistrationId": "CNPJ-OBB-PAGTO"
+      },
+      {
+        "Status": "Inactive",
+        "AuthorisationDomain": "Open Banking Brasil ",
+        "Role": "TRD",
+        "Authorisations": [],
+        "RegistrationId": "UniqRegistrationId"
       },
       {
         "Status": "Active",
@@ -716,13 +765,6 @@
           }
         ],
         "RegistrationId": "CNPJ-OBB-DADOS"
-      },
-      {
-        "Status": "Active",
-        "AuthorisationDomain": "Open Banking Brasil ",
-        "Role": "PAGTO",
-        "Authorisations": [],
-        "RegistrationId": "CNPJ-OBB-PAGTO"
       },
       {
         "Status": "Active",

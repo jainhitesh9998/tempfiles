@@ -1,0 +1,290 @@
+openapi: 3.0.0
+info:
+  title: Esignet Consent Registry Api Changes
+  description: |-
+    This api-doc contains All the api level changes to be performed as part of esignet Consent Registry Implementation
+    
+    Some useful links:
+    - [Mosip](https://mosip.io)
+    - [Esignet Github](https://github.com/mosip/esignet/)
+    - [Esignet Docs](https://docs.esignet.io/)
+    
+
+  termsOfService: https://community.mosip.io/tos
+  contact:
+    email: hitesh@infosys.com
+  license:
+    name: MPL 2.0
+    url: https://www.mozilla.org/en-US/MPL/2.0/
+  version: 1.4.0
+externalDocs:
+  description: Existing Mosip API Docs
+  url: https://mosip.stoplight.io/docs/identity-provider/branches/main/6f1syzijynu40-e-signet
+servers:
+  - url: https://esignet.dev.mosip.net
+    description: mosip dev server
+  - url: https://collab.mosip.net
+    description: esignet collab environment
+tags:
+  - name: Authorization
+    description: Authorization Controller
+    externalDocs:
+      description: Source Code
+      url: https://github.com/mosip/esignet/blob/master/esignet-service/src/main/java/io/mosip/esignet/controllers/AuthorizationController.java
+  - name: LinkedAuthorization
+    description: Linked Authorizaion Controller
+    externalDocs: 
+      description: Source Code
+      url: https://github.com/mosip/esignet/blob/master/esignet-service/src/main/java/io/mosip/esignet/controllers/LinkedAuthorizationController.java
+
+paths:
+  /v2/authorization/authenticate:
+    post:
+      tags:
+        - Authorization
+      summary: Authenticate Request 
+      description: 
+        Authenticate the user with the provided auth-challenge request. The user is authenticated and post that consent checks are done. Does a consent object exist?   Is the consent valid? Is there any difference between previously requested consent and user's accepted consent? If the condition is false, a CAPTURE consent enum is sent to the UI to enable the capture consent screen
+      operationId: Authenticate
+      requestBody:
+        description: Authenticate the user
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthRequestWrapper'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponseWrapper'
+  
+
+  /v2/linked-authorization/authenticate:
+    post:
+      tags:
+        - LinkedAuthorization
+      summary: Linked Authenticate
+      description: 
+        The User Performs Biometric Login post QR code scan from Inji app and sends the LinkedAuthenticate request. This request is linked with the transactionId generated for the login using /oauth-details endpoint. If No consent Collection is required, the response would mention so and trigger a kafka message to provide the deferred response to esignet-ui indicating the completion of linked-transaction flow, Else that flow is triggered by POST linked-authorization/consent api
+      operationId: Linked Authenticate
+      requestBody:
+        description: Authenticate the user
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LinkedKycAuthRequestWrapper'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LinkedKycAuthResponseWrapper'
+
+  
+components:
+  schemas:
+    AuthRequestWrapper:
+      type: object
+      properties:
+        requestTime:
+          type: string
+          example: 2023-05-03T17:39:05.614Z 
+        AuthRequest:
+          type: object
+          $ref: '#/components/schemas/AuthRequest'
+      required:
+        - requestTime
+        - AuthRequest
+        
+    AuthRequest:
+      type: object
+      properties:
+        transactionId:
+          type: string
+          example: kXRCi4W2a_0d_8I4Omw_-cDO3bknZEIaUMmyO9Llm3o
+        individualId:
+          type: string
+          example: 19839128391787
+        challengeList:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuthChallenge'
+      required:
+        - transactionId
+        - individualId
+        - challengeList
+
+    AuthChallenge:
+      type: object
+      properties:
+        authFactorType:
+          type: string
+        challenge:
+          type: string
+          example: 111111
+        format:
+          type: string
+          example: format
+      required:
+        - authFactorType
+        - challenge
+        - format
+      
+        
+    AuthResponseWrapper:
+      type: object
+      properties:
+        responseTime:
+          type: string
+          example: 2023-05-03T17:39:05.614Z
+        AuthResponse:
+          type: object
+          $ref: '#/components/schemas/AuthResponse'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorResponse'
+
+    AuthResponse:
+      type: object
+      properties:
+        transactionId:
+          type: string
+          example: kXRCi4W2a_0d_8I4Omw_-cDO3bknZEIaUMmyO9Llm3o
+        consentAction:
+          type: string
+          example: CAPTURE
+          enum:
+            - NOCAPTURE
+            - CAPTURE
+            
+    ErrorResponse:
+      type: object
+      properties:
+        errorCode:
+          type: string
+          example: response_timeout
+        errorMessage:
+          type: string
+          example: Deferred response timed out.
+    
+
+    AuthCodeRequestWrapper:
+      type: object
+      properties:
+        requestTime:
+          type: string
+          example: 2023-05-03T17:39:05.614Z 
+        AuthCodeRequest:
+          type: object
+          $ref: '#/components/schemas/AuthCodeRequest'
+
+    AuthCodeRequest:
+      type: object
+      properties:
+        transactionId:
+          type: string
+          example: kXRCi4W2a_0d_8I4Omw_-cDO3bknZEIaUMmyO9Llm3o
+        acceptedClaims:
+          type: array
+          items:
+            type: string
+          
+        permittedAuthorizeScopes:
+          type: array
+          items:
+            type: string
+              
+              
+    AuthCodeResponseWrapper:
+      type: object
+      properties:
+        responseTime:
+          type: string
+          example: 2023-05-03T17:39:05.614Z
+        AuthCodeResponse:
+          type: object
+          $ref: '#/components/schemas/AuthCodeResponse'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorResponse'
+
+    AuthCodeResponse:
+      type: object
+      properties:
+        nonce:
+          type: string
+          example: "12345678"
+        state:
+          type: string
+          example: "abcdefgh"
+        code:
+          type: string
+          example: "ijklmnop"
+        redirectUri:
+          type: string
+          example: "https://example.com/callback"
+
+
+    LinkedKycAuthRequestWrapper:
+      type: object
+      properties:
+        requestTime:
+          type: string
+          example: 2023-05-03T17:39:05.614Z 
+        LinkedKycAuthRequest:
+          type: object
+          $ref: '#/components/schemas/LinkedKycAuthRequest'
+      required:
+        - requestTime
+        - LinkedKycAuthRequest
+    LinkedKycAuthRequest:
+      type: object
+      properties:
+        linkedTransactionId:
+          type: string
+          example: kXRCi4W2a_0d_8I4Omw_-cDO3bknZEIaUMmyO9Llm3o
+        individualId:
+          type: string
+          example: 19839128391787
+        challengeList:
+          type: array
+          items:
+            $ref: '#/components/schemas/AuthChallenge'
+      required:
+        - linkedTransactionId
+        - individualId
+        - challengeList
+
+    LinkedKycAuthResponseWrapper:
+      type: object
+      properties:
+        responseTime:
+          type: string
+          example: 2023-05-03T17:39:05.614Z
+        LinkedAuthResponse:
+          type: object
+          $ref: '#/components/schemas/LinkedKycAuthResponse'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorResponse'
+
+    LinkedKycAuthResponse:
+      type: object
+      properties:
+        transactionId:
+          type: string
+          example: kXRCi4W2a_0d_8I4Omw_-cDO3bknZEIaUMmyO9Llm3o
+        consentAction:
+          type: string
+          example: CAPTURE
+          enum:
+            - NOCAPTURE
+            - CAPTURE

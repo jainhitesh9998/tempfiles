@@ -16,7 +16,7 @@ info:
   license:
     name: MPL 2.0
     url: https://www.mozilla.org/en-US/MPL/2.0/
-  version: 1.4.0
+  version: 1.5.0
 externalDocs:
   description: Existing Mosip API Docs
   url: https://mosip.stoplight.io/docs/identity-provider/branches/main/6f1syzijynu40-e-signet
@@ -84,6 +84,29 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/LinkedKycAuthResponseWrapper'
+  
+  /v2/linked-authorization/consent:
+    post:
+      tags:
+        - LinkedAuthorization
+      summary: Linked Consent
+      description: 
+        Post authenticate, if user consent doesn't exist, wallet app sends a signed user consent, which is stored.
+      operationId: Linked Consent
+      requestBody:
+        description: Authenticate the user
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LinkedConsentRequestWrapper'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LinkedConsentResponseWrapper'
 
   
 components:
@@ -279,7 +302,7 @@ components:
     LinkedKycAuthResponse:
       type: object
       properties:
-        transactionId:
+        linkedTransactionId:
           type: string
           example: kXRCi4W2a_0d_8I4Omw_-cDO3bknZEIaUMmyO9Llm3o
         consentAction:
@@ -288,3 +311,65 @@ components:
           enum:
             - NOCAPTURE
             - CAPTURE
+       
+    LinkedConsentRequestWrapper:
+      type: object
+      properties:
+        requestTime:
+          type: string
+          example: 2023-05-03T17:39:05.614Z 
+        LinkedConsentRequest:
+          type: object
+          $ref: '#/components/schemas/LinkedConsentRequest'
+      required:
+        - requestTime
+        - LinkedConsentRequest  
+        
+    LinkedConsentRequest:
+      type: object
+      properties:
+        linkedTransactionId:
+          type: string
+          example: kXRCi4W2a_0d_8I4Omw_-cDO3bknZEIaUMmyO9Llm3o
+        acceptedClaims:
+          type: array
+          items:
+            type: string
+        permittedAuthorizeScopes:
+          type: array
+          items:
+            type: string
+        signature:
+          type: string
+          
+    LinkedConsentResponseWrapper:
+      type: object
+      properties:
+        responseTime:
+          type: string
+          example: 2023-05-03T17:39:05.614Z
+        LinkedAuthResponse:
+          type: object
+          $ref: '#/components/schemas/LinkedKycAuthResponse'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ErrorResponse'
+
+    LinkedConsentResponse:
+      type: object
+      properties:
+        linkedTransactionId:
+          type: string
+          example: kXRCi4W2a_0d_8I4Omw_-cDO3bknZEIaUMmyO9Llm3o
+        consentAction:
+          type: string
+          example: CAPTURE
+          enum:
+            - NOCAPTURE
+            - CAPTURE
+        
+        
+          
+          
+          

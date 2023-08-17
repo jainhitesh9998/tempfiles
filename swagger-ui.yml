@@ -38,7 +38,7 @@ tags:
       url: https://github.com/mosip/esignet/blob/master/esignet-service/src/main/java/io/mosip/esignet/controllers/LinkedAuthorizationController.java
 
 paths:
-  /v2/authorization/authenticate:
+  /authorization/v2/authenticate:
     post:
       tags:
         - Authorization
@@ -62,7 +62,7 @@ paths:
                 $ref: '#/components/schemas/AuthResponseWrapper'
   
 
-  /v2/linked-authorization/authenticate:
+  /linked-authorization/v2/authenticate:
     post:
       tags:
         - LinkedAuthorization
@@ -85,7 +85,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/LinkedKycAuthResponseWrapper'
   
-  /v2/linked-authorization/consent:
+  /linked-authorization/v2/consent:
     post:
       tags:
         - LinkedAuthorization
@@ -350,7 +350,7 @@ components:
           example: 2023-05-03T17:39:05.614Z
         LinkedAuthResponse:
           type: object
-          $ref: '#/components/schemas/LinkedKycAuthResponse'
+          $ref: '#/components/schemas/LinkedConsentResponse'
         errors:
           type: array
           items:
@@ -362,14 +362,3 @@ components:
         linkedTransactionId:
           type: string
           example: kXRCi4W2a_0d_8I4Omw_-cDO3bknZEIaUMmyO9Llm3o
-        consentAction:
-          type: string
-          example: CAPTURE
-          enum:
-            - NOCAPTURE
-            - CAPTURE
-        
-        
-          
-          
-          
